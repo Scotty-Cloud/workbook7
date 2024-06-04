@@ -13,7 +13,7 @@ main {
   padding: 20px;
 }
 
-#todo-table {
+#user-table {
   background-color: rgba(255, 255, 255, 0.15); /* glassmorphism effect */
   border-radius: 10px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -24,7 +24,7 @@ main {
   width: 80%;
 }
 
-#todo-table th {
+#user-table th {
   background-color: rgba(255, 255, 255, 0.2); /* glassmorphism effect */
   padding: 10px;
   border-radius: 5px 5px 0 0;
@@ -33,7 +33,7 @@ main {
   color: #fff; /* white text color */
 }
 
-#todo-table td {
+#user-table td {
   background-color: rgba(255, 255, 255, 0.15); /* glassmorphism effect */
   padding: 10px;
   border-radius: 0 5px 5px 0;

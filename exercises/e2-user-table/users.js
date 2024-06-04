@@ -1,54 +1,37 @@
-fetch("https://jsonplaceholder.typicode.com/todos")
-  .then((response) => response.json())
-  .then((data) => {
-    const tableBody = document.querySelector("#todo-data");
+fetch("https://jsonplaceholder.typicode.com/users")
+ .then((response) => response.json())
+ .then((data) => {
+    const tableBody = document.querySelector("#user-data");
 
-    for (let i = 0; i < Math.min(data.length, 6); i++) {
+    data.forEach((user) => {
       const row = document.createElement("tr");
 
       const cell1 = document.createElement("td");
-      cell1.innerText = data[i].id;
+      cell1.innerText = user.id;
 
       const cell2 = document.createElement("td");
-      cell2.innerText = data[i].title;
+      cell2.innerText = user.name;
 
       const cell3 = document.createElement("td");
-      cell3.innerText = data[i].completed ? "Yes" : "No";
+      cell3.innerText = user.username;
+
+      const cell4 = document.createElement("td")
+      cell4.innerText = user.email;
+
+      const cell5 = document.createElement("td")
+      cell5.innerText = `${user.address.street}, ${user.address.suite}, ${user.address.city} ${user.address.zipcode}`;
+
+      const cell6 = document.createElement("td")
+      cell6.innerText = `${user.address.geo.lat}, ${user.address.geo.lng}`
 
       row.appendChild(cell1);
       row.appendChild(cell2);
       row.appendChild(cell3);
+      row.appendChild(cell4);
+      row.appendChild(cell5);
+      row.appendChild(cell6);
 
       tableBody.appendChild(row);
-    }
+    });
   })
-  .catch((error) => console.error("Error:", error));
-
-// solution 2
-// fetch("https://jsonplaceholder.typicode.com/todos")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const tableBody = document.querySelector("#todo-data");
-
-//     data.slice(0, 6).forEach((data) => {
-//       {
-//         const row = document.createElement("tr");
-
-//         const cell1 = document.createElement("td");
-//         cell1.innerText = data.id;
-
-//         const cell2 = document.createElement("td");
-//         cell2.innerText = data.title;
-
-//         const cell3 = document.createElement("td");
-//         cell3.innerText = data.completed ? "Yes" : "No";
-
-//         row.appendChild(cell1);
-//         row.appendChild(cell2);
-//         row.appendChild(cell3);
-
-//         tableBody.appendChild(row);
-//       }
-//     });
-//   })
-//   .catch((error) => console.error("Error:", error));
+ .catch((error) => console.error("Error:", error));

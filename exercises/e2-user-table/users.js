@@ -22,7 +22,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
       cell5.innerText = `${user.address.street}, ${user.address.suite}, ${user.address.city} ${user.address.zipcode}`;
 
       const cell6 = document.createElement("td")
-      cell6.innerText = `${user.address.geo.lat}, ${user.address.geo.lng}`
+      cell6.innerText = user.company.name
 
       row.appendChild(cell1);
       row.appendChild(cell2);

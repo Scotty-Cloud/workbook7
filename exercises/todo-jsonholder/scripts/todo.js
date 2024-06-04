@@ -10,7 +10,7 @@ fetchButton.addEventListener("click", () => {
   fetch(apiUrl)
     .then((response) => response.json())
     .then((data) => {
-        todoDetailsDiv.innerText = `
+      todoDetailsDiv.innerText = `
         \nTitle: ${data.title}\n
         Completed: ${data.completed ? "Yes" : "No"}\n
       `;

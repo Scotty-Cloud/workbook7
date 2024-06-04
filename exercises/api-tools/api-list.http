@@ -1,0 +1,8 @@
+#GET ALL EMOJIS
+GET https://emojihub.yurace.pro/api/all
+
+###GET RANDOM EMOJI
+GET https://emojihub.yurace.pro/api/random
+
+###GET COLOR
+GET https://color.serialif.com/blue

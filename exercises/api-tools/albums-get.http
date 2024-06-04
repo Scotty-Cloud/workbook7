@@ -1,0 +1,2 @@
+#GET ALBUMS
+GET https://jsonplaceholder.typicode.com/albums/

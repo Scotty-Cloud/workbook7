@@ -37,7 +37,7 @@
 //  .catch((error) => console.error("Error:", error));
 
 // solution 2
-fetch("https://jsonplaceholder.typicode.com/users")
+fetch("http://localhost:3000/users")
   .then((response) => response.json())
   .then((users) => {
     const tableBody = document.querySelector("#user-data");

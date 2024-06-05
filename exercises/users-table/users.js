@@ -40,7 +40,6 @@
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((response) => response.json())
   .then((users) => {
-    console.log(users);
     const tableBody = document.querySelector("#user-data");
     for (const user of users) {
       let row = tableBody.insertRow();
@@ -63,4 +62,4 @@ fetch("https://jsonplaceholder.typicode.com/users")
       cell6.innerText = user.company.name;
     }
   });
-//  .catch((error) => console.error("Error:", error));
+  // .catch((error) => console.error("Error:", error));

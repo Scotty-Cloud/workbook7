@@ -10,8 +10,8 @@
 //   })
 //   .catch((error) => console.error(error));
 
-const imgTag = document.getElementById("dog-image");
-const generateButton = document.getElementById("generate-new-image");
+const imgTag = document.querySelector("#dog-image");
+const generateButton = document.querySelector("#generate-new-image");
 
 generateButton.addEventListener('click', () => {
   fetch('https://dog.ceo/api/breeds/image/random')

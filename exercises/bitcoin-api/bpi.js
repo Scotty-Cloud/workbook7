@@ -35,5 +35,6 @@ refreshButton.addEventListener("click", () => {
         Current Bitcoin Price (USD): $${usdPrice.toFixed(2)}
         Current Bitcoin Price (GBP): $${gbpPrice.toFixed(2)}
         Current Bitcoin Price (EUR): $${eurPrice.toFixed(2)}`;
-    });
+    })
+    .catch((error) => console.error(error))
 });

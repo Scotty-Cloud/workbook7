@@ -17,9 +17,10 @@
 
 fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
   .then((response) => response.json())
-  .then((data) => {
+  .then((info) => info.data)
+  .then((populationDataArray) => {
     const tableBody = document.querySelector("#population-data-body");
-    for (const populationData of data.data) {
+    for (const populationData of populationDataArray) {
       let row = tableBody.insertRow();
 
       let cell1 = row.insertCell();

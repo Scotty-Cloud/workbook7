@@ -1,10 +1,10 @@
-// solution 2 .then method
+// solution 1 .then method
 // fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
 //   .then((response) => response.json())
 //   .then((info) => info.data)
 //   .then((populationDataArray) => {
-//     const tableBody = document.querySelector("#population-data-body");
-//     for (const populationData of populationDataArray) {
+//     let tableBody = document.querySelector("#population-data-body");
+//     for (let populationData of populationDataArray) {
 //       let row = tableBody.insertRow();
 
 //       let cell1 = row.insertCell();
@@ -15,17 +15,17 @@
 //     }
 //   });
 
-// solution 3 async await method
+// solution 2 async await method
 async function fetchData() {
   try {
-    const response = await fetch(
+    let response = await fetch(
       "https://datausa.io/api/data?drilldowns=Nation&measures=Population"
     );
-    const info = await response.json();
-    const populationDataArray = info.data;
+    let info = await response.json();
+    let populationDataArray = info.data;
 
-    const tableBody = document.querySelector("#population-data-body");
-    for (const populationData of populationDataArray) {
+    let tableBody = document.querySelector("#population-data-body");
+    for (let populationData of populationDataArray) {
       let row = tableBody.insertRow();
 
       let cell1 = row.insertCell();

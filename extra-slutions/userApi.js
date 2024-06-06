@@ -2,27 +2,27 @@
 fetch("https://jsonplaceholder.typicode.com/users")
  .then((response) => response.json())
  .then((data) => {
-    const tableBody = document.querySelector("#user-data");
+    let tableBody = document.querySelector("#user-data");
 
     data.forEach((user) => {
-      const row = document.createElement("tr");
+      let row = document.createElement("tr");
 
-      const cell1 = row.insertCell();
+      let cell1 = row.insertCell();
       cell1.innerText = user.id;
 
-      const cell2 = document.createElement("td");
+      let cell2 = document.createElement("td");
       cell2.innerText = user.name;
 
-      const cell3 = document.createElement("td");
+      let cell3 = document.createElement("td");
       cell3.innerText = user.username;
 
-      const cell4 = document.createElement("td")
+      let cell4 = document.createElement("td")
       cell4.innerText = user.email;
 
-      const cell5 = document.createElement("td")
+      let cell5 = document.createElement("td")
       cell5.innerText = `${user.address.street}, ${user.address.suite}, ${user.address.city} ${user.address.zipcode}`;
 
-      const cell6 = document.createElement("td")
+      let cell6 = document.createElement("td")
       cell6.innerText = user.company.name
 
       row.appendChild(cell1);

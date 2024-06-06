@@ -2,7 +2,7 @@
 // fetch("http://localhost:3000/users")
 //   .then((response) => response.json())
 //   .then((users) => {
-//     const tableBody = document.querySelector("#user-data");
+//     let tableBody = document.querySelector("#user-data");
 //     for (const user of users) {
 //       let row = tableBody.insertRow();
 

@@ -2,8 +2,8 @@
 fetch('https://datausa.io/api/data?drilldowns=Nation&measures=Population')
   .then(response => response.json())
   .then(data => {
-    const populationData = data.data;
-    const tableBody = document.getElementById('population-data-body');
+    let populationData = data.data;
+    let tableBody = document.getElementById('population-data-body');
 
     populationData.forEach(item => {
       const row = document.createElement('tr');

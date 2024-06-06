@@ -1,13 +1,13 @@
 //solution 1 .then method
-// const fetchButton = document.querySelector("#fetchButton");
-// const todoIdInput = document.querySelector("#todoId");
-// const todoDetailsDiv = document.querySelector("#todoDetails");
+// let fetchButton = document.querySelector("#fetchButton");
+// let todoIdInput = document.querySelector("#todoId");
+// let todoDetailsDiv = document.querySelector("#todoDetails");
 
 // fetchButton.addEventListener("click", () => {
-//   const todoId = todoIdInput.value;
+//   let todoId = todoIdInput.value;
 
 //   // const apiUrl = `https://jsonplaceholder.typicode.com/todos/${todoId}`;
-//   const apiUrl = `http://localhost:3000/todos/${todoId}`;
+//   let apiUrl = `http://localhost:3000/todos/${todoId}`;
 
 //   fetch(apiUrl)
 //     .then((response) => response.json())
@@ -24,9 +24,9 @@
 // });
 
 // solution 2 async await method
-const fetchButton = document.querySelector("#fetchButton");
-const todoIdInput = document.querySelector("#todoId");
-const todoDetailsDiv = document.querySelector("#todoDetails");
+let fetchButton = document.querySelector("#fetchButton");
+let todoIdInput = document.querySelector("#todoId");
+let todoDetailsDiv = document.querySelector("#todoDetails");
 
 fetchButton.addEventListener("click", async () => {
   try {

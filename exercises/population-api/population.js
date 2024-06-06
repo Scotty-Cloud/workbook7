@@ -1,20 +1,4 @@
-// fetch('https://datausa.io/api/data?drilldowns=Nation&measures=Population')
-//   .then(response => response.json())
-//   .then(data => {
-//     const populationData = data.data;
-//     const tableBody = document.getElementById('population-data-body');
-
-//     populationData.forEach(item => {
-//       const row = document.createElement('tr');
-//       row.innerText = `
-//         \n${item.Year}\n
-//         ${item.Population}\n
-//       `;
-//       tableBody.appendChild(row);
-//     });
-//   })
-//   .catch(error => console.error(error));
-
+// solution 2 .then method
 // fetch("https://datausa.io/api/data?drilldowns=Nation&measures=Population")
 //   .then((response) => response.json())
 //   .then((info) => info.data)
@@ -31,6 +15,7 @@
 //     }
 //   });
 
+// solution 3 async await method
 async function fetchData() {
   try {
     const response = await fetch(

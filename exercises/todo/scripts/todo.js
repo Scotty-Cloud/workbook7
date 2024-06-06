@@ -1,3 +1,4 @@
+//solution 1 .then method
 // const fetchButton = document.querySelector("#fetchButton");
 // const todoIdInput = document.querySelector("#todoId");
 // const todoDetailsDiv = document.querySelector("#todoDetails");
@@ -22,17 +23,18 @@
 //     });
 // });
 
+// solution 2 async await method
 const fetchButton = document.querySelector("#fetchButton");
 const todoIdInput = document.querySelector("#todoId");
 const todoDetailsDiv = document.querySelector("#todoDetails");
 
 fetchButton.addEventListener("click", async () => {
   try {
-    const todoId = todoIdInput.value;
+    let todoId = todoIdInput.value;
     // const apiUrl = `http://localhost:3000/todos/${todoId}`;
 
-    const response = await fetch(`http://localhost:3000/todos/${todoId}`);
-    const data = await response.json();
+    let response = await fetch(`http://localhost:3000/todos/${todoId}`);
+    let data = await response.json();
 
     todoDetailsDiv.innerText = `
       \nTitle: ${data.title}\n

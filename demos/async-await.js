@@ -2,7 +2,7 @@
 async function fetchData() {
   try {
     //simulate an asynchronous operation with a delay of 1 second
-    const result = await new Promise((resovlse, reject) => {
+    const result = await new Promise((resolve, reject) => {
       setTimeout(() => resolve("Success"), 1000); // Logs "Success!" after 1 second
     });
     // Log the result after the asynchronous operation is complete

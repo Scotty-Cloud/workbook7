@@ -61,5 +61,5 @@ fetch("http://localhost:3000/users")
       let cell6 = row.insertCell();
       cell6.innerText = user.company.name;
     }
-  });
-  // .catch((error) => console.error("Error:", error));
+  })
+ .catch((error) => console.error("Error:", error));
